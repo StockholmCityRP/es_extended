@@ -616,6 +616,7 @@ ESX.RegisterServerCallback('esx:getOtherPlayerData', function(source, cb, target
 end)
 
 TriggerEvent("es:addGroup", "jobmaster", "user", function(group) end)
+TriggerEvent("es:addGroup", "trusted", "user", function(group) end)
 
 ESX.StartDBSync()
 ESX.StartPayCheck()
