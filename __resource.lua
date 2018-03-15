@@ -2,7 +2,7 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 description 'ES Extended'
 
-version '1.0.12'
+version '1.0.13'
 
 server_scripts {
   '@async/async.lua',
@@ -35,6 +35,7 @@ client_scripts {
   'client/common.lua',
   'client/entityiter.lua',
   'client/functions.lua',
+  'client/wrapper.lua',
   'client/main.lua'
 }
 
@@ -48,6 +49,7 @@ files {
   'html/css/app.css',
 
   'html/js/mustache.min.js',
+  'html/js/wrapper.js',
   'html/js/app.js',
 
   'html/fonts/pdown.ttf',
