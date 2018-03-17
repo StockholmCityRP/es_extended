@@ -166,11 +166,11 @@ end)
 
 RegisterNetEvent('esx:addWeapon')
 AddEventHandler('esx:addWeapon', function(weaponName, ammo)
-  local playerPed  = GetPlayerPed(-1)
-  local weaponHash = GetHashKey(weaponName)
+	local playerPed  = GetPlayerPed(-1)
+	local weaponHash = GetHashKey(weaponName)
 
-  GiveWeaponToPed(playerPed, weaponHash, ammo, false, false)
-  SetPedAmmo(playerPed, weaponHash, ammo)
+	GiveWeaponToPed(playerPed, weaponHash, ammo, false, false)
+	SetPedAmmo(playerPed, weaponHash, ammo) -- remove leftover ammo
 end)
 
 RegisterNetEvent('esx:removeWeapon')
@@ -179,6 +179,7 @@ AddEventHandler('esx:removeWeapon', function(weaponName)
 	local weaponHash = GetHashKey(weaponName)
 
 	RemoveWeaponFromPed(playerPed,  weaponHash)
+	SetPedAmmo(playerPed, weaponHash, 0) -- remove leftover ammo
 end)
 
 -- Commands

@@ -129,8 +129,8 @@ TriggerEvent('es:addGroupCommand', 'giveweapon', 'superadmin', function(source, 
   local xPlayer    = ESX.GetPlayerFromId(args[1])
   local weaponName = string.upper(args[2])
 
-  xPlayer.addWeapon(weaponName, 1000)
+  xPlayer.addWeapon(weaponName, tonumber(args[3]))
 
 end, function(source, args, user)
   TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficient Permissions.")
-end, {help = _U('giveweapon'), params = {{name = "id", help = _U('id_param')}, {name = "weapon", help = _U('weapon')}}})
+end, {help = _U('giveweapon'), params = {{name = "id", help = _U('id_param')}, {name = "weapon", help = _U('weapon')}, {name = "amount", help = 'amount of ammo'}}})
