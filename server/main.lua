@@ -206,7 +206,9 @@ AddEventHandler('es:playerLoaded', function(source, _player)
             ['@grade']    = userData.job.grade
           },
           function(result)
-
+            if result[1] == nil then
+				print('es_extended: could not find job, the player will not load!')
+			end
             userData.job['grade_name']   = result[1].name
             userData.job['grade_label']  = result[1].label
             userData.job['grade_salary'] = result[1].salary
