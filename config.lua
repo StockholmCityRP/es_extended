@@ -1,5 +1,5 @@
 Config                          = {}
-Config.MaxPlayers               = 32
+Config.MaxPlayers               = 64
 Config.Accounts                 = { 'bank', 'black_money' }
 --Config.AccountLabels            = { bank = 'Banque', black_money = 'Argent Sale' } -- French
 Config.AccountLabels            = { bank = 'Bank', black_money = 'Dirty Money' } -- English
