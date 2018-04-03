@@ -46,6 +46,7 @@ Locales['sv'] = {
   ['spawn_ped'] = 'spawna NPC',
   ['spawn_ped_param'] = 'example a_m_m_hillbilly_01',
   ['givemoney'] = 'ge pengar',
+  ['setmoney'] = 'bestäm pengar för spelare',
   ['money_amount'] = 'summa pengar',
   ['invalid_account'] = 'ogiltigt konto',
   ['account'] = 'konto',

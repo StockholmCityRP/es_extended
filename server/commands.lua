@@ -82,6 +82,22 @@ end, function(source, args, user)
   TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficient Permissions.")
 end, {help = _U('givemoney'), params = {{name = "id", help = _U('id_param')}, {name = "amount", help = _U('money_amount')}}})
 
+TriggerEvent('es:addGroupCommand', 'setmoney', 'superadmin', function(source, args, user)
+
+	local _source = source
+	local xPlayer = ESX.GetPlayerFromId(args[1])
+	local amount  = tonumber(args[2])
+
+	if amount ~= nil then
+		xPlayer.setMoney(amount)
+	else
+		TriggerClientEvent('esx:showNotification', _source, _U('amount_invalid'))
+	end
+
+end, function(source, args, user)
+	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Insufficient Permissions.")
+end, {help = _U('setmoney'), params = {{name = "id", help = _U('id_param')}, {name = "amount", help = _U('money_amount')}}})
+
 TriggerEvent('es:addGroupCommand', 'giveaccountmoney', 'superadmin', function(source, args, user)
 
   local _source = source
